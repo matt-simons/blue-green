@@ -11,6 +11,6 @@ func main() {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "<html><head><style>body{ background-color: blue;}</style></head><body></body></html>")
+	fmt.Fprint(w, "<html><head><style>body{ background-color: green;}</style></head><body></body></html>")
 	w.WriteHeader(http.StatusOK)
 }

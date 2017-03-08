@@ -30,7 +30,7 @@ func TestBodyColor(t *testing.T) {
     }
 
     // Check the response body is what we expect.
-    expected := `blue`
+    expected := `green`
     if ! strings.Contains(rr.Body.String(), expected) {
         t.Errorf("background colour is not %v, html page is %v",
             expected, rr.Body.String())
