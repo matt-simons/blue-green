@@ -6,10 +6,11 @@ import (
 )
 
 func main() {
-    http.HandleFunc("/", homeHandler)
+    http.HandleFunc("/", HomeHandler)
     panic(http.ListenAndServe(":8000", nil))
 }
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<html><head><style>body{ background-color: green;}</style></head><body></body></html>")
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "<html><head><style>body{ background-color: green;}</style></head><body></body></html>")
+	w.WriteHeader(http.StatusOK)
 }
