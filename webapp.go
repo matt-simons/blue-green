@@ -6,11 +6,8 @@ import (
 )
 
 func main() {
-    http.HandleFunc("/", HomeHandler)
+    fs := http.FileServer(http.Dir("images"))
+    http.HandleFunc("/", homeHandler)
     panic(http.ListenAndServe(":8000", nil))
 }
 
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "<html><head><style>body{ background-color: blue;}</style></head><body></body></html>")
-	w.WriteHeader(http.StatusOK)
-}
