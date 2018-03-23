@@ -1,4 +1,4 @@
-FROM alexellis2/go-armhf:1.7.4
+FROM golang:1.10.0
 
 # Copy the local package files to the container's workspace.
 ADD . /go/src/github.com/matt-simons/blue-green
