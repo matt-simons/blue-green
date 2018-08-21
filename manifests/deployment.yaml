@@ -7,24 +7,24 @@ metadata:
   finalizers: []
   labels:
     app: "celestial"
-    celestial-staging-v006: "true"
+    celestial-staging-v007: "true"
     cluster: "celestial-staging"
     load-balancer-celestial-staging: "true"
-    replication-controller: "celestial-staging-v006"
+    replication-controller: "celestial-staging-v007"
     stack: "staging"
     version: "6"
-  name: "celestial-staging-v006"
+  name: "celestial-staging-v007"
   namespace: "default"
   ownerReferences: []
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchExpressions: []
     matchLabels:
       app: "celestial"
-      celestial-staging-v006: "true"
+      celestial-staging-v007: "true"
       cluster: "celestial-staging"
-      replication-controller: "celestial-staging-v006"
+      replication-controller: "celestial-staging-v007"
       stack: "staging"
       version: "6"
   template:
@@ -32,10 +32,10 @@ spec:
       finalizers: []
       labels:
         app: "celestial"
-        celestial-staging-v006: "true"
+        celestial-staging-v007: "true"
         cluster: "celestial-staging"
         load-balancer-celestial-staging: "true"
-        replication-controller: "celestial-staging-v006"
+        replication-controller: "celestial-staging-v007"
         stack: "staging"
         version: "6"
       ownerReferences: []
@@ -70,8 +70,3 @@ spec:
       terminationGracePeriodSeconds: 30
       tolerations: []
       volumes: []
-status:
-  conditions: []
-  fullyLabeledReplicas: 5
-  observedGeneration: 3
-  replicas: 5
