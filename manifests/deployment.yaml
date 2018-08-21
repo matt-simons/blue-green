@@ -4,6 +4,9 @@ kind: "ReplicaSet"
 metadata:
   annotations:
     service.spinnaker.io/enabled: "true"
+    moniker.spinnaker.io/application: "celestial"
+    moniker.spinnaker.io/cluster: "celestial"
+    moniker.spinnaker.io/stack: "staging"
   finalizers: []
   labels:
     app: "celestial"
