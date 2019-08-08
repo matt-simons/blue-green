@@ -7,4 +7,3 @@ func main() {
     http.Handle("/", fs)
     panic(http.ListenAndServe(":8000", nil))
 }
-
